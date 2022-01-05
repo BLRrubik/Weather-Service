@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Main</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p> Persons </p>
+<div th:each="person : ${persons}">
+    <span th:text="${person.name}"/>
+    <a th:href="@{/{id}(id=${person.id})/edit}" th:text="edit"/>
+</div>
+</body>
+</html>
